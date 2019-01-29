@@ -1,0 +1,200 @@
+/* ----Font Import and Global Styling---- */
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,700i');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Sans', Helvetica, sans-serif;
+  font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IBM Plex Sans', Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: -10px;
+}
+
+li {
+  list-style: none;
+  list-style-position: inside;
+}
+
+.btn {
+  display: inline-block;
+  background-color: white;
+  border-radius: 50px;
+  border-color: transparent;
+  min-width: 100px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.btn:hover {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ----Colors---- */
+
+.red {
+  color: #F45B69;
+}
+
+.red-bg {
+  background-color: #F45B69;
+}
+
+.blue {
+  color: #7EE8FA;
+}
+
+.blue-bg {
+  background-color: #7EE8FA;
+}
+
+.yellow {
+  color: #F9F88B;
+}
+
+.yellow-bg {
+  background-color: #F9F88B;
+}
+
+.green {
+  color: #7FFFD4;
+}
+
+.green-bg {
+  background-color: #7FFFD4;
+}
+
+.purple {
+  color: #907AD6;
+}
+
+.purple-bg {
+  background-color: #907AD6;
+}
+
+.white {
+  color: white;
+}
+
+.grey-bg {
+  background-color: #F5F5F5;
+}
+
+/* ----Layout and Clearfix---- */
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ----Navbar---- */
+
+.nav-wrapper {
+  width: 100%;
+  height: 60px;
+}
+
+.menu {
+  display: inline-block;
+  float: right;
+  margin-right: 30px;
+}
+
+.menu li {
+  float: left;
+  margin-left: 15px;
+  font-size: 1rem;
+}
+
+.menu a {
+  font-family: 'IBM Plex Sans', Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #171717;
+  text-decoration: none;
+}
+
+.logo {
+  float: left;
+  height: 100%;
+}
+
+/* ----Body Styles---- */
+
+.full-width-banner {
+  width: 100%;
+  //background-image: url(../images/gyst-logo.png);
+  background-size: cover;
+}
+
+.text-on-bg {
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0rem;
+  max-width: 400px;
+}
+
+.cat-tab {
+  padding: 1rem;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+.blog-block {
+  flex: auto;
+  flex-direction: row;
+}
+
+.blog-fp {
+  max-width: 80vw;
+}
+
+.quote {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* ----Footer---- */
+
+.footer {
+  position: relative;
+  height: 60px;
+}
+
+.copyright {
+  text-align: right;
+}
+
+.newsletter {
+
+}
+
+/* =================================
+  Media Queries
+==================================== */
+@media (min-width: 789px) {
+  .container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* =================================
+  CSS Attribute Selector Styles
+==================================== */
