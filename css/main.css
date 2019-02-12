@@ -1,22 +1,13 @@
 /* ----Font Import and Global Styling---- */
-
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,700i');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:300');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'IBM Plex Sans', Helvetica, sans-serif;
-  font-weight: 200;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'IBM Plex Sans', Helvetica, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-  margin-top: 0;
-  margin-bottom: -10px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 300;
 }
 
 li {
@@ -24,62 +15,53 @@ li {
   list-style-position: inside;
 }
 
-.btn {
-  display: inline-block;
-  background-color: white;
-  border-radius: 50px;
-  border-color: transparent;
-  min-width: 100px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-}
-
-.btn:hover {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-}
 
 /* ----Colors---- */
 
 
 
-/* ----Layout and Clearfix---- */
-.container {
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* ----Body Styles---- */
 
+.content-box {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.skill-box {
+  display: block;
+  text-align: center;
+}
+
+.skill-dot::before {
+  content:"";
+  display: inline-block;
+  padding: 3px;
+  width: 5px;
+  height: 5px;
+  background-color: #404040;
+  border-radius: 50px;
+
+}
 
 /* ----Footer---- */
 
-.footer {
-  position: relative;
-  height: 60px;
-}
-
-.copyright {
-  text-align: right;
-}
-
-.newsletter {
-
-}
 
 /* =================================
   Media Queries
 ==================================== */
-@media (min-width: 789px) {
-  .container {
-    width: 85%;
-    max-width: 1200px;
-    margin: 0 auto;
+@media (min-width: 768px) {
+
+  .row {
+    margin-top: 12px;
   }
+
+  .content-box {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.15);
+    height: calc(50vh - 20px);
+  }
+
 }
