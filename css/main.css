@@ -1,12 +1,10 @@
-/* ----Font Import and Global Styling---- */
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:300');
-
+/* ----Global Styling, Colors, Display---- */
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Overpass', sans-serif;
   font-weight: 300;
 }
 
@@ -15,24 +13,12 @@ li {
   list-style-position: inside;
 }
 
-
-/* ----Colors---- */
-
-
-
 /* ----Body Styles---- */
-
-.content-box {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.img-circle {
-  border-radius: 100%;
-  max-width: 200px;
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  width: 95%;
 }
 
 .skill-box {
@@ -41,33 +27,87 @@ li {
 }
 
 .skill-dot::before {
-  content:"";
+  content: "";
   display: inline-block;
   padding: 3px;
   width: 5px;
   height: 5px;
   background-color: #404040;
   border-radius: 50px;
-
 }
 
-/* ----Footer---- */
+/* ----Navigation---- */
+.nav {
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  padding: 5px 10px;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+  position: fixed;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.logo-img {
+  display: flex;
+  border-radius: 100%;
+  max-width: 60px;
+}
+
+.desktop-menu {
+  display: none;
+}
 
 /* =================================
   Media Queries
 ==================================== */
+
 @media (min-width: 768px) {
-
-  .row {
-    margin-top: 12px;
+  .nav {
+    height: 100%;
+    width: 20vw;
+    padding-top: 20px;
+    overflow-x: hidden;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
   }
 
-  .content-box {
-    background-color: white;
-    border-radius: 3px;
-    box-shadow: 0 2px 4px rgba(0,0,0,.15);
-    height: calc(50vh - 20px);
+  .nav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #2196F3;
+    display: block;
   }
 
+  .nav a:hover {
+    color: #064579;
+  }
+
+  .desktop-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .main {
+    padding-top: 0px;
+    margin-left: 22vw;
+    max-width: 74vw;
+  }
+
+  .logo-img {
+    max-width: 120px;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
 }
