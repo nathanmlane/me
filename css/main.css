@@ -209,6 +209,10 @@ button {
   vertical-align: middle;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 button::before, button::after {
   box-sizing: inherit;
   content: '';
