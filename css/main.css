@@ -1,4 +1,4 @@
-/* ----Global Styling, Colors, Display---- */
+/* ----- Global Styling, Colors, Display ----- */
 * {
   box-sizing: border-box;
 }
@@ -10,6 +10,7 @@ body {
 
 a {
   color: black;
+  text-decoration: none;
 }
 
 li {
@@ -24,6 +25,7 @@ li {
   width: 95%;
 }
 
+/* ----- Colors ----- */
 .red {
   color: #EF4343;
 }
@@ -108,12 +110,13 @@ li {
   color: white;
 }
 
-.grey-bg{
+.grey-bg {
   background-color: #CCCCCB;
   color: white;
 }
 
-/* ----Navigation---- */
+/* ----- Navigation ----- */
+
 .nav {
   height: 70px;
   width: 100%;
@@ -147,6 +150,7 @@ li {
   text-decoration: none;
   border-radius: 2px;
   margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
 .toggle-menu {
@@ -192,7 +196,358 @@ li {
   outline-color: white;
 }
 
-/* ----Body Styles---- */
+/* ----- Buttons ----- */
+
+button {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.2rem;
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  position: relative;
+  vertical-align: middle;
+}
+
+button::before, button::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+button:focus {
+    outline: none;
+}
+
+.project-btn {
+  transition: color 0.25s;
+}
+
+.project-btn::before, .project-btn::after {
+  border: 2px solid transparent;
+  border-radius: 2px;
+  width: 0;
+  height: 0;
+}
+
+.project-btn::before {
+  top: 0;
+  left: 0;
+}
+
+.project-btn::after {
+  bottom: 0;
+  right: 0;
+}
+
+.project-btn:hover {
+  color: #80489C;
+}
+
+.project-btn:hover::before, .project-btn:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.project-btn:hover::before {
+  border-top-color: #80489C;
+  border-right-color: #80489C;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.project-btn:hover::after {
+  border-bottom-color: #80489C;
+  border-left-color: #80489C;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+.skill-btn {
+  transition: color 0.25s;
+}
+
+.skill-btn::before, .skill-btn::after {
+  border: 2px solid transparent;
+  border-radius: 2px;
+  width: 0;
+  height: 0;
+}
+
+.skill-btn::before {
+  top: 0;
+  left: 0;
+}
+
+.skill-btn::after {
+  bottom: 0;
+  right: 0;
+}
+
+.skill-btn:hover {
+  color: #43ba87;
+}
+
+.skill-btn:hover::before, .skill-btn:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.skill-btn:hover::before {
+  border-top-color: #43ba87;
+  border-right-color: #43ba87;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.skill-btn:hover::after {
+  border-bottom-color: #43ba87;
+  border-left-color: #43ba87;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+.work-btn {
+  transition: color 0.25s;
+}
+
+.work-btn::before, .work-btn::after {
+  border: 2px solid transparent;
+  border-radius: 2px;
+  width: 0;
+  height: 0;
+}
+
+.work-btn::before {
+  top: 0;
+  left: 0;
+}
+
+.work-btn::after {
+  bottom: 0;
+  right: 0;
+}
+
+.work-btn:hover {
+  color: #CCCCCB;
+}
+
+.work-btn:hover::before, .work-btn:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.work-btn:hover::before {
+  border-top-color: #CCCCCB;
+  border-right-color: #CCCCCB;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.work-btn:hover::after {
+  border-bottom-color: #CCCCCB;
+  border-left-color: #CCCCCB;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+.education-btn {
+  transition: color 0.25s;
+}
+
+.education-btn::before, .education-btn::after {
+  border: 2px solid transparent;
+  border-radius: 2px;
+  width: 0;
+  height: 0;
+}
+
+.education-btn::before {
+  top: 0;
+  left: 0;
+}
+
+.education-btn::after {
+  bottom: 0;
+  right: 0;
+}
+
+.education-btn:hover {
+  color: #2966B1;
+}
+
+.education-btn:hover::before, .education-btn:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.education-btn:hover::before {
+  border-top-color: #2966B1;
+  border-right-color: #2966B1;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.education-btn:hover::after {
+  border-bottom-color: #2966B1;
+  border-left-color: #2966B1;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+.personal-btn {
+  transition: color 0.25s;
+}
+
+.personal-btn::before, .personal-btn::after {
+  border: 2px solid transparent;
+  border-radius: 2px;
+  width: 0;
+  height: 0;
+}
+
+.personal-btn::before {
+  top: 0;
+  left: 0;
+}
+
+.personal-btn::after {
+  bottom: 0;
+  right: 0;
+}
+
+.personal-btn:hover {
+  color: #E9AC54;
+}
+
+.personal-btn:hover::before, .personal-btn:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.personal-btn:hover::before {
+  border-top-color: #E9AC54;
+  border-right-color: #E9AC54;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.personal-btn:hover::after {
+  border-bottom-color: #E9AC54;
+  border-left-color: #E9AC54;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+.contact-btn {
+  transition: color 0.25s;
+}
+
+.contact-btn::before, .contact-btn::after {
+  border: 2px solid transparent;
+  border-radius: 2px;
+  width: 0;
+  height: 0;
+}
+
+.contact-btn::before {
+  top: 0;
+  left: 0;
+}
+
+.contact-btn::after {
+  bottom: 0;
+  right: 0;
+}
+
+.contact-btn:hover {
+  color: #EF4343;
+}
+
+.contact-btn:hover::before, .contact-btn:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-btn:hover::before {
+  border-top-color: #EF4343;
+  border-right-color: #EF4343;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.contact-btn:hover::after {
+  border-bottom-color: #EF4343;
+  border-left-color: #EF4343;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+.black-btn {
+  transition: color 0.25s;
+}
+
+.black-btn::before, .black-btn::after {
+  border: 2px solid transparent;
+  border-radius: 2px;
+  width: 0;
+  height: 0;
+}
+
+.black-btn::before {
+  top: 0;
+  left: 0;
+}
+
+.black-btn::after {
+  bottom: 0;
+  right: 0;
+}
+
+.black-btn:hover {
+  color: #000;
+}
+
+.black-btn:hover::before, .black-btn:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.black-btn:hover::before {
+  border-top-color: #000;
+  border-right-color: #000;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.black-btn:hover::after {
+  border-bottom-color: #000;
+  border-left-color: #000;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+/* ----- Body Styles ----- */
+
+.project-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+}
+
+.text-container {
+  max-width: 600px;
+  align-self: center
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  margin-right: 2rem;
+  flex-basis: 500px;
+}
+
+.next {}
+
+.previous {
+  align-self: flex-end;
+}
 
 .skill-box {
   display: block;
@@ -225,15 +580,17 @@ li {
   .nav a {
     padding: 6px 8px 6px 8px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 1.1rem;
     display: block;
     border-radius: 2px;
     margin-bottom: 5px;
   }
 
-  .nav a:hover {
-
+  .nav-title {
+    font-size: 1.2rem;
   }
+
+  .nav a:hover {}
 
   .desktop-menu {
     display: flex;
@@ -242,14 +599,17 @@ li {
   }
 
   .main {
-    display: grid;
-    grid-template-columns: 25vw 50vw;
-    grid-gap: 10px;
     background-color: #fff;
     color: #444;
     padding-top: 0px;
     margin-left: 22vw;
     max-width: 74vw;
+  }
+
+  .project-container {
+    display: grid;
+    grid-template-columns: 25vw 50vw;
+    grid-gap: 10px;
   }
 
   .logo-img {
