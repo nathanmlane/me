@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Overpass Mono', sans-serif;
   font-weight: 300;
 }
 
@@ -199,7 +199,7 @@ li {
 /* ----- Buttons ----- */
 
 button {
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Overpass Mono', sans-serif;
   font-size: 1.2rem;
   background: none;
   border: 0;
