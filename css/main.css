@@ -1,4 +1,5 @@
-/* ----- Global Styling, Colors, Display ----- */
+/* ----- Global Styling ----- */
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +7,10 @@
 body {
   font-family: 'Overpass Mono', sans-serif;
   font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: none;
 }
 
 a {
@@ -25,7 +30,10 @@ li {
   width: 95%;
 }
 
-/* ----- Colors ----- */
+/* =================================
+  Colors
+==================================== */
+
 .red {
   color: #EF4343;
 }
@@ -115,7 +123,9 @@ li {
   color: white;
 }
 
-/* ----- Navigation ----- */
+/* =================================
+  Navigation
+==================================== */
 
 .nav {
   height: 70px;
@@ -196,7 +206,9 @@ li {
   outline-color: white;
 }
 
-/* ----- Buttons ----- */
+/* =================================
+  Buttons
+==================================== */
 
 button {
   font-family: 'Overpass Mono', sans-serif;
@@ -225,318 +237,183 @@ button:focus {
     outline: none;
 }
 
-.project-btn {
+/* ----- Outline Button Animation ----- */
+
+.btn {
   transition: color 0.25s;
 }
 
-.project-btn::before, .project-btn::after {
+.btn::before, .btn::after {
   border: 2px solid transparent;
   border-radius: 2px;
   width: 0;
   height: 0;
 }
 
-.project-btn::before {
+.btn::before {
   top: 0;
   left: 0;
 }
 
-.project-btn::after {
+.btn::after {
   bottom: 0;
   right: 0;
 }
 
-.project-btn:hover {
+.btn:hover::before, .btn:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.btn:hover::before {
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.btn:hover::after {
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+/* ----- Outline Button Colors ----- */
+
+.project:hover {
   color: #80489C;
 }
 
-.project-btn:hover::before, .project-btn:hover::after {
-  width: 100%;
-  height: 100%;
-}
-
-.project-btn:hover::before {
+.project:hover::before {
   border-top-color: #80489C;
   border-right-color: #80489C;
-  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 
-.project-btn:hover::after {
+.project:hover::after {
   border-bottom-color: #80489C;
   border-left-color: #80489C;
-  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 
-.skill-btn {
-  transition: color 0.25s;
-}
-
-.skill-btn::before, .skill-btn::after {
-  border: 2px solid transparent;
-  border-radius: 2px;
-  width: 0;
-  height: 0;
-}
-
-.skill-btn::before {
-  top: 0;
-  left: 0;
-}
-
-.skill-btn::after {
-  bottom: 0;
-  right: 0;
-}
-
-.skill-btn:hover {
+.skill:hover {
   color: #43ba87;
 }
 
-.skill-btn:hover::before, .skill-btn:hover::after {
-  width: 100%;
-  height: 100%;
-}
-
-.skill-btn:hover::before {
+.skill:hover::before {
   border-top-color: #43ba87;
   border-right-color: #43ba87;
-  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 
-.skill-btn:hover::after {
+.skill:hover::after {
   border-bottom-color: #43ba87;
   border-left-color: #43ba87;
-  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 
-.work-btn {
-  transition: color 0.25s;
-}
-
-.work-btn::before, .work-btn::after {
-  border: 2px solid transparent;
-  border-radius: 2px;
-  width: 0;
-  height: 0;
-}
-
-.work-btn::before {
-  top: 0;
-  left: 0;
-}
-
-.work-btn::after {
-  bottom: 0;
-  right: 0;
-}
-
-.work-btn:hover {
+.work:hover {
   color: #CCCCCB;
 }
 
-.work-btn:hover::before, .work-btn:hover::after {
-  width: 100%;
-  height: 100%;
-}
-
-.work-btn:hover::before {
+.work:hover::before {
   border-top-color: #CCCCCB;
   border-right-color: #CCCCCB;
-  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 
-.work-btn:hover::after {
+.work:hover::after {
   border-bottom-color: #CCCCCB;
   border-left-color: #CCCCCB;
-  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 
-.education-btn {
-  transition: color 0.25s;
-}
-
-.education-btn::before, .education-btn::after {
-  border: 2px solid transparent;
-  border-radius: 2px;
-  width: 0;
-  height: 0;
-}
-
-.education-btn::before {
-  top: 0;
-  left: 0;
-}
-
-.education-btn::after {
-  bottom: 0;
-  right: 0;
-}
-
-.education-btn:hover {
+.education:hover {
   color: #2966B1;
 }
 
-.education-btn:hover::before, .education-btn:hover::after {
-  width: 100%;
-  height: 100%;
-}
-
-.education-btn:hover::before {
+.education:hover::before {
   border-top-color: #2966B1;
   border-right-color: #2966B1;
-  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 
-.education-btn:hover::after {
+.education:hover::after {
   border-bottom-color: #2966B1;
   border-left-color: #2966B1;
-  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 
-.personal-btn {
-  transition: color 0.25s;
-}
-
-.personal-btn::before, .personal-btn::after {
-  border: 2px solid transparent;
-  border-radius: 2px;
-  width: 0;
-  height: 0;
-}
-
-.personal-btn::before {
-  top: 0;
-  left: 0;
-}
-
-.personal-btn::after {
-  bottom: 0;
-  right: 0;
-}
-
-.personal-btn:hover {
+.personal:hover {
   color: #E9AC54;
 }
 
-.personal-btn:hover::before, .personal-btn:hover::after {
-  width: 100%;
-  height: 100%;
-}
-
-.personal-btn:hover::before {
+.personal:hover::before {
   border-top-color: #E9AC54;
   border-right-color: #E9AC54;
-  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 
-.personal-btn:hover::after {
+.personal:hover::after {
   border-bottom-color: #E9AC54;
   border-left-color: #E9AC54;
-  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 
-.contact-btn {
-  transition: color 0.25s;
-}
-
-.contact-btn::before, .contact-btn::after {
-  border: 2px solid transparent;
-  border-radius: 2px;
-  width: 0;
-  height: 0;
-}
-
-.contact-btn::before {
-  top: 0;
-  left: 0;
-}
-
-.contact-btn::after {
-  bottom: 0;
-  right: 0;
-}
-
-.contact-btn:hover {
+.contact:hover {
   color: #EF4343;
 }
 
-.contact-btn:hover::before, .contact-btn:hover::after {
-  width: 100%;
-  height: 100%;
-}
-
-.contact-btn:hover::before {
+.contact:hover::before {
   border-top-color: #EF4343;
   border-right-color: #EF4343;
-  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 
-.contact-btn:hover::after {
+.contact:hover::after {
   border-bottom-color: #EF4343;
   border-left-color: #EF4343;
-  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 
-.black-btn {
-  transition: color 0.25s;
-}
-
-.black-btn::before, .black-btn::after {
-  border: 2px solid transparent;
-  border-radius: 2px;
-  width: 0;
-  height: 0;
-}
-
-.black-btn::before {
-  top: 0;
-  left: 0;
-}
-
-.black-btn::after {
-  bottom: 0;
-  right: 0;
-}
-
-.black-btn:hover {
+.black:hover {
   color: #000;
 }
 
-.black-btn:hover::before, .black-btn:hover::after {
-  width: 100%;
-  height: 100%;
-}
-
-.black-btn:hover::before {
+.black:hover::before {
   border-top-color: #000;
   border-right-color: #000;
-  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 
-.black-btn:hover::after {
+.black:hover::after {
   border-bottom-color: #000;
   border-left-color: #000;
-  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 
-/* ----- Body Styles ----- */
+/* =================================
+  Body Styles
+==================================== */
 
 .project-container {
   width: 100vw;
   height: 100vh;
+  padding: 0 10px;
+}
+
+.mockup-img {
+  max-width: 300px;
+}
+
+.project-specs {
+  font-size: .9rem;
+  font-style: italic;
+  font-weight: lighter;
+  margin-top: -10px;
 }
 
 .center {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100vh;
 }
 
 .text-container {
-  max-width: 600px;
-  align-self: center
+  max-width: 800px;
+}
+
+.skill-row {
+  display: block;
+  margin-top: 50px;
+}
+
+.skill-col {
+  display: flex;
+  flex-direction: column;
 }
 
 .button-container {
@@ -545,12 +422,15 @@ button:focus {
   margin-top: 3rem;
   margin-right: 2rem;
   flex-basis: 500px;
+  margin-bottom: 3rem;
 }
 
-.next {}
+.next {
+  align-self: flex-end;
+}
 
 .previous {
-  align-self: flex-end;
+  align-self: flex-start;
 }
 
 .skill-box {
@@ -571,6 +451,7 @@ button:focus {
 /* =================================
   Media Queries
 ==================================== */
+
 @media (min-width: 768px) {
   .nav {
     height: 100%;
@@ -610,10 +491,52 @@ button:focus {
     max-width: 74vw;
   }
 
+  .center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container {
+    margin-top: 0px;
+  }
+
+  .skill-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+  }
+
+  .button-container {
+    margin-bottom: 0rem;
+  }
+
   .project-container {
-    display: grid;
-    grid-template-columns: 25vw 50vw;
-    grid-gap: 10px;
+    display: flex;
+    max-width: 70vw;
+  }
+
+  .skill-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .skill-col {
+    display: flex;
+    flex: 1;
+    margin: 0 20px;
+  }
+
+  .timeline {
+    min-width: 150px;
+  }
+
+  .m-10 {
+    margin-top: 10px;
+  }
+
+  .m-25 {
+    margin-top: 25px;
   }
 
   .logo-img {
