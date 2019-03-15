@@ -51,7 +51,7 @@ li {
 
 .red-bg {
   background-color: #EF4343;
-  color: white;
+  color: white !important;
 }
 
 .green {
@@ -65,7 +65,7 @@ li {
 
 .green-bg {
   background-color: #43ba87;
-  color: white;
+  color: white !important;
 }
 
 .orange {
@@ -79,7 +79,7 @@ li {
 
 .orange-bg {
   background-color: #E9AC54;
-  color: white;
+  color: white !important;
 }
 
 .purple {
@@ -98,7 +98,7 @@ li {
 
 .purple-bg {
   background-color: #80489C;
-  color: white;
+  color: white !important;
 }
 
 .blue {
@@ -112,7 +112,7 @@ li {
 
 .blue-bg {
   background-color: #2966B1;
-  color: white;
+  color: white !important;
 }
 
 .grey {
@@ -126,7 +126,7 @@ li {
 
 .grey-bg {
   background-color: #CCCCCB;
-  color: white;
+  color: white !important;
 }
 
 /* =================================
