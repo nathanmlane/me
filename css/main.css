@@ -34,6 +34,7 @@ li {
   margin-right: auto;
   padding-top: 70px;
   width: 95%;
+  visibility: visible;
 }
 
 /* =================================
@@ -183,7 +184,7 @@ button.dark {
     position: fixed;
     z-index: 1;
     bottom: 3%;
-    right: 23%;
+    right: 8rem;
     margin: auto;
     width: 30px;
     height: 30px;
@@ -298,7 +299,7 @@ body.night #sun-moon:after {
 .mobile-nav-trigger {
   font-family: 'Overpass', sans-serif;
   font-size: 1rem;
-  color: black;
+  color: #fff;
   background-color: transparent;
   border-radius: 2px;
   border-color: transparent;
@@ -660,10 +661,6 @@ button:focus {
 
   .mobile-nav, .mobile-nav-trigger, .toggle-menu {
     display: none;
-  }
-
-  #sun-moon {
-      right: 10%;
   }
 }
 
