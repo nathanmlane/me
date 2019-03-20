@@ -11,12 +11,15 @@ function openMobileNav() {
     nav.style.display = "flex";
   }
 
+  //Styles the toggled menu div
   var header = document.getElementById("header");
   header.classList.toggle("toggle-menu");
 
+  //Styles the menu button used to close
   var close = document.getElementById("close");
   close.classList.toggle("close");
 
+  //hides the content behind the menu div
   var x = document.getElementById("hide-bg");
   if (x.style.visibility === "hidden") {
     x.style.visibility = "visible";
@@ -35,7 +38,9 @@ $(function() {
   });
 });
 
-// JQuery Function -- Dark Mode
+// JQuery Function -- Dark Mode --
+
+//set starting point for dark mode, store that value in sessionStorage, use if statement to toggle correctly;
 
 let toggleDarkMode = function() {
   $("body").toggleClass('night day');
@@ -50,6 +55,7 @@ let toggleDarkMode = function() {
   $("a").toggleClass('dark light');
   $("button").toggleClass('dark light');
   $("nav").toggleClass('dark light');
+  $("nav-title").toggleClass('dark light');
 }
 
 $("#sun-moon").click(toggleDarkMode);

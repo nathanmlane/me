@@ -1,5 +1,4 @@
 /* ----- Global Styling ----- */
-
 * {
   box-sizing: border-box;
 }
@@ -10,7 +9,7 @@ body {
 }
 
 p {
-color: #fff;
+  color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,7 +39,6 @@ li {
 /* =================================
   Colors
 ==================================== */
-
 .red {
   color: #EF4343;
 }
@@ -133,7 +131,6 @@ li {
 /* =================================
   Navigation
 ==================================== */
-
 body {
   transition: background-color .5s ease;
 }
@@ -149,21 +146,27 @@ p.dark {
 h1.dark {
   color: #000;
 }
+
 h2.dark {
   color: #000;
 }
+
 h3.dark {
   color: #000;
 }
+
 h4.dark {
   color: #000;
 }
+
 h5.dark {
   color: #000;
 }
+
 h6.dark {
   color: #000;
 }
+
 li.dark {
   color: #000;
 }
@@ -180,64 +183,69 @@ button.dark {
   color: #000;
 }
 
+.nav-title.dark {
+  color: #000;
+  border-bottom: 2px solid black;
+}
+
 #sun-moon {
-    position: fixed;
-    z-index: 1;
-    bottom: 3%;
-    right: 8rem;
-    margin: auto;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #fff;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: background-color .5s ease;
+  position: fixed;
+  z-index: 1;
+  bottom: 3%;
+  right: 8rem;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color .5s ease;
 }
 
 #sun-moon:before {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 50%;
-    background: #a5abb0;
-    transition: border-radius .5s ease, background-color .5s ease, width .5s ease, transform .5s ease;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  background: #a5abb0;
+  transition: border-radius .5s ease, background-color .5s ease, width .5s ease, transform .5s ease;
 }
 
 #sun-moon:after {
-    content: "Light mode";
-    white-space: nowrap;
-    text-indent: 40px;
-    line-height: 25px;
-    z-index: 2;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 0 0 0 #f5f8f8, 0 0 0 0 #f5f8f8, 0 0 0 3px #3f3f4c, 0 0 0 30px #fff;
-    box-sizing: border-box;
-    transition: border-color .5s ease,box-shadow .5s ease;
+  content: "Light mode";
+  white-space: nowrap;
+  text-indent: 40px;
+  line-height: 25px;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 0 #f5f8f8, 0 0 0 0 #f5f8f8, 0 0 0 3px #3f3f4c, 0 0 0 30px #fff;
+  box-sizing: border-box;
+  transition: border-color .5s ease, box-shadow .5s ease;
 }
 
 body.night #sun-moon {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 body.night #sun-moon:before {
-    background: #3f3f4c;
-    border-radius: 50%;
-    width: 150%;
-    transform: translate(-5%,-35%) rotate(-25deg);
+  background: #3f3f4c;
+  border-radius: 50%;
+  width: 150%;
+  transform: translate(-5%, -35%) rotate(-25deg);
 }
 
 body.night #sun-moon:after {
-    content: "Dark mode";
-    color: #fff;
-    box-shadow: 0 0 0 0 #3f3f4c, 0 0 0 0 #3f3f4c, 0 0 0 3px #a5abb0, 0 0 0 30px #3f3f4c;
-    border-color: #3f3f4c;
+  content: "Dark mode";
+  color: #fff;
+  box-shadow: 0 0 0 0 #3f3f4c, 0 0 0 0 #3f3f4c, 0 0 0 3px #a5abb0, 0 0 0 30px #3f3f4c;
+  border-color: #3f3f4c;
 }
 
 .nav {
@@ -322,7 +330,6 @@ body.night #sun-moon:after {
 /* =================================
   Buttons
 ==================================== */
-
 button {
   font-family: 'Overpass Mono', sans-serif;
   font-size: 1.2rem;
@@ -348,11 +355,10 @@ button::before, button::after {
 }
 
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 /* ----- Outline Button Animation ----- */
-
 .btn {
   transition: color 0.25s;
 }
@@ -388,7 +394,6 @@ button:focus {
 }
 
 /* ----- Outline Button Colors ----- */
-
 .project:hover {
   color: #80489C;
 }
@@ -490,7 +495,6 @@ button:focus {
 /* =================================
   Body Styles
 ==================================== */
-
 .project-container {
   width: 100vw;
   height: 100vh;
@@ -567,7 +571,6 @@ button:focus {
 /* =================================
   Media Queries
 ==================================== */
-
 @media (min-width: 768px) {
   .nav {
     height: 100%;
@@ -589,6 +592,10 @@ button:focus {
 
   .nav-title {
     font-size: 1.2rem;
+    border-bottom: 2px solid white;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
   }
 
   .nav a:hover {}
@@ -665,13 +672,11 @@ button:focus {
 }
 
 @media (max-width: 768px) {
+  #p-btn {
+    display: none;
+  }
 
-#p-btn {
-  display: none;
-}
-
-.project-container {
-  height: auto;
-}
-
+  .project-container {
+    height: auto;
+  }
 }
