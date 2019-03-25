@@ -55,6 +55,7 @@ let toggleDarkMode = function() {
   $("button").toggleClass('dark light');
   $(".nav").toggleClass('dark light');
   $("nav-title").toggleClass('dark light');
+  $(".mockup-img").toggleClass('dark light');
 }
 
 $("#sun-moon").click(toggleDarkMode);

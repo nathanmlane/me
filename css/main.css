@@ -561,6 +561,16 @@ progress::-moz-progress-bar {
 .mockup-img {
   max-width: 250px;
   margin: 1.75rem 2rem 0 -.5rem;
+  border: 2px solid #fff;
+  border-radius: 2px;
+}
+
+.mockup-img.dark {
+  border: 2px solid #23232a;
+}
+
+.project-link {
+  font-size: 1rem;
 }
 
 .project-specs {
