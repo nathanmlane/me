@@ -566,7 +566,7 @@ progress::-moz-progress-bar {
 }
 
 .mockup-img.dark {
-  border: 2px solid #23232a;
+  border: 2px solid #23232a !important;
 }
 
 .project-link {
