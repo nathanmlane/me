@@ -1,6 +1,6 @@
 <h2>Code Louisville Project - Personal Resume</h2>
 
-This project was completed for the Code Louisville Front-End Development Course. This site is to be used a personal resume for myself, and was built using HTML, CSS, and JS. The features a one completely custom JS function, as well as a couple others inspired and tweaked from a couple of developers I found on CodePen (credited in JS comments).
+This project was completed for the Code Louisville Front-End Development Course. This site is to be used a personal resume for myself, and was built using HTML, CSS, and JS. The features a one completely custom JS function, as well as a couple others inspired and tweaked from a couple of developers I found on CodePen (credited in JS comments). I am still working on completing the JS to save the state of my darkModeToggle feature, but the basic functionality of the feature is present. 
 
 The CSS is completely custom, only using normalize.css to breakdown the browser differences. Of the 4 JS functions, 3 (darkModeToggle, anchorScroll, and skillBarAnimation) are functional components found on Codepen and tweaked to various degress to fit my needs within the project. The mobile menu JS is completely custom.
 
