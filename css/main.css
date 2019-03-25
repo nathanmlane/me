@@ -623,7 +623,7 @@ progress::-moz-progress-bar {
 
 .contact-container {
   display: flex;
-  height: 90vh;
+  height: 100%;
   width: 100vw;
   flex-direction: column;
   align-items: center;
@@ -634,10 +634,6 @@ progress::-moz-progress-bar {
   Media Queries
 ==================================== */
 @media (min-width: 768px) {
-
-  hr {
-    display: none;
-  }
 
   .nav {
     height: 100%;
@@ -697,7 +693,7 @@ progress::-moz-progress-bar {
   }
 
   .button-container {
-    margin-bottom: 0rem;
+    margin-bottom: 5rem;
   }
 
   .project-container {
@@ -756,11 +752,29 @@ progress::-moz-progress-bar {
 }
 
 @media (max-width: 768px) {
+
   #p-btn {
     display: none;
   }
 
+}
+
+@media (max-width: 1106px) {
+
   .project-container {
     height: auto;
   }
+
+}
+
+@media (max-width: 1141px) {
+
+  .single-skill p {
+    font-size: .9rem;
+  }
+
+  .skill-col h2 {
+    font-size: 1.2rem;
+  }
+
 }
