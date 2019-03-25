@@ -6,4 +6,4 @@ The CSS is completely custom, only using normalize.css to breakdown the browser 
 
 The content features real projects I have been a part of and real work and educational history. I plan to continue using this as the base for my online resume in the future, and updating features as I continue to learn and grow.
 
-The site can be found at nathanmlane.com
+The site can be found at <a href="https://sidekicknate.github.io/me/" target="blank">https://sidekicknate.github.io/me/.</a>
