@@ -28,6 +28,10 @@ li {
   color: #fff;
 }
 
+hr {
+  margin: 2rem 0 .5rem 0;
+}
+
 .main {
   margin-left: auto;
   margin-right: auto;
@@ -136,7 +140,7 @@ body {
 }
 
 body.night {
-  background-color: #3f3f4c;
+  background-color: #23232A;
 }
 
 p.dark {
@@ -205,7 +209,7 @@ button.dark {
 #sun-moon {
   position: fixed;
   z-index: 1;
-  bottom: 3%;
+  bottom: 2.5rem;
   right: 8rem;
   margin: auto;
   width: 30px;
@@ -239,7 +243,7 @@ button.dark {
   height: 100%;
   border-radius: 50%;
   border: 2px solid #fff;
-  box-shadow: 0 0 0 0 #f5f8f8, 0 0 0 0 #f5f8f8, 0 0 0 3px #3f3f4c, 0 0 0 30px #fff;
+  box-shadow: 0 0 0 0 #f5f8f8, 0 0 0 0 #f5f8f8, 0 0 0 3px #23232A, 0 0 0 30px #fff;
   box-sizing: border-box;
   transition: border-color .5s ease, box-shadow .5s ease;
 }
@@ -249,7 +253,7 @@ body.night #sun-moon {
 }
 
 body.night #sun-moon:before {
-  background: #3f3f4c;
+  background: #23232A;
   border-radius: 50%;
   width: 150%;
   transform: translate(-5%, -35%) rotate(-25deg);
@@ -258,8 +262,8 @@ body.night #sun-moon:before {
 body.night #sun-moon:after {
   content: "Dark mode";
   color: #fff;
-  box-shadow: 0 0 0 0 #3f3f4c, 0 0 0 0 #3f3f4c, 0 0 0 3px #a5abb0, 0 0 0 30px #3f3f4c;
-  border-color: #3f3f4c;
+  box-shadow: 0 0 0 0 #23232A, 0 0 0 0 #23232A, 0 0 0 3px #a5abb0, 0 0 0 30px #23232A;
+  border-color: #23232A;
 }
 
 .nav {
@@ -274,9 +278,17 @@ body.night #sun-moon:after {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
   position: fixed;
   display: flex;
-  background-color: transparent;
+  background-color: #1D1D23;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav {
+  transition: background-color .5s ease;
+}
+
+.nav.dark {
+  background-color: #fff;
 }
 
 .logo-img {
@@ -507,10 +519,41 @@ button:focus {
 }
 
 /* =================================
+  Skill Bar Styling
+==================================== */
+
+.single-skill {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+progress {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    height: 1em;
+    margin-left: 10px;
+    width: 100%;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #5A5A5F;
+}
+
+progress::-webkit-progress-value {
+    background-color: #43BA87;
+}
+
+progress::-moz-progress-bar {
+    background-color: #43BA87;
+}
+
+/* =================================
   Body Styles
 ==================================== */
 .project-container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 0 10px;
 }
@@ -557,7 +600,7 @@ button:focus {
   margin-top: 3rem;
   margin-right: 2rem;
   flex-basis: 500px;
-  margin-bottom: 3rem;
+  margin-bottom: 8rem;
 }
 
 .next {
@@ -568,55 +611,24 @@ button:focus {
   align-self: flex-start;
 }
 
-.italic:after {
-  content: '';
-  font-style: italic;
-}
-
-.one:after {
-  content: ' -- 1/10';
-}
-
-.two:after {
-  content: ' -- 2/10';
-}
-
-.three:after {
-  content: ' -- 3/10';
-}
-
-.four:after {
-  content: ' -- 4/10';
-}
-
-.five:after {
-  content: ' -- 5/10';
-}
-
-.six:after {
-  content: ' -- 6/10';
-}
-
-.seven:after {
-  content: ' -- 7/10';
-}
-
-.eight:after {
-  content: ' -- 8/10';
-}
-
-.nine:after {
-  content: ' -- 9/10';
-}
-
-.ten:after {
-  content: ' -- 10/10';
+.contact-container {
+  display: flex;
+  height: 90vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* =================================
   Media Queries
 ==================================== */
 @media (min-width: 768px) {
+
+  hr {
+    display: none;
+  }
+
   .nav {
     height: 100%;
     width: 20vw;
@@ -688,12 +700,18 @@ button:focus {
     margin-top: 5rem;
     flex: 1;
     width: 100%;
+    padding: 0 10px;
     justify-content: space-around;
   }
 
   .skill-col {
     display: flex;
     flex-direction: column;
+    width: 20vw;
+  }
+
+  .skill-bar {
+    width: 100px;
   }
 
   .timeline {
