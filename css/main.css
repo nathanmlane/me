@@ -183,6 +183,20 @@ button.dark {
   color: #000;
 }
 
+.black.dark:hover {
+  color: #000;
+}
+
+.black.dark:hover::before {
+  border-top-color: #000;
+  border-right-color: #000;
+}
+
+.black.dark:hover::after {
+  border-bottom-color: #000;
+  border-left-color: #000;
+}
+
 .nav-title.dark {
   color: #000;
   border-bottom: 2px solid black;
@@ -479,17 +493,17 @@ button:focus {
 }
 
 .black:hover {
-  color: #000;
+  color: #fff;
 }
 
 .black:hover::before {
-  border-top-color: #000;
-  border-right-color: #000;
+  border-top-color: #fff;
+  border-right-color: #fff;
 }
 
 .black:hover::after {
-  border-bottom-color: #000;
-  border-left-color: #000;
+  border-bottom-color: #fff;
+  border-left-color: #fff;
 }
 
 /* =================================
@@ -502,7 +516,8 @@ button:focus {
 }
 
 .mockup-img {
-  max-width: 300px;
+  max-width: 250px;
+  margin: 1.75rem 2rem 0 -.5rem;
 }
 
 .project-specs {
@@ -553,19 +568,49 @@ button:focus {
   align-self: flex-start;
 }
 
-.skill-box {
-  display: block;
-  text-align: center;
+.italic:after {
+  content: '';
+  font-style: italic;
 }
 
-.skill-dot::before {
-  content: "";
-  display: inline-block;
-  padding: 3px;
-  width: 5px;
-  height: 5px;
-  background-color: #404040;
-  border-radius: 50px;
+.one:after {
+  content: ' -- 1/10';
+}
+
+.two:after {
+  content: ' -- 2/10';
+}
+
+.three:after {
+  content: ' -- 3/10';
+}
+
+.four:after {
+  content: ' -- 4/10';
+}
+
+.five:after {
+  content: ' -- 5/10';
+}
+
+.six:after {
+  content: ' -- 6/10';
+}
+
+.seven:after {
+  content: ' -- 7/10';
+}
+
+.eight:after {
+  content: ' -- 8/10';
+}
+
+.nine:after {
+  content: ' -- 9/10';
+}
+
+.ten:after {
+  content: ' -- 10/10';
 }
 
 /* =================================
@@ -623,9 +668,9 @@ button:focus {
     margin-top: 0px;
   }
 
-  .skill-row {
+.skill-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 0px;
   }
 
@@ -640,14 +685,15 @@ button:focus {
 
   .skill-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-top: 5rem;
+    flex: 1;
+    width: 100%;
+    justify-content: space-around;
   }
 
   .skill-col {
     display: flex;
-    flex: 1;
-    margin: 0 20px;
+    flex-direction: column;
   }
 
   .timeline {
@@ -668,6 +714,16 @@ button:focus {
 
   .mobile-nav, .mobile-nav-trigger, .toggle-menu {
     display: none;
+  }
+
+  .width-fix {
+    width: 50vw;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

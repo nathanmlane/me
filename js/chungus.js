@@ -3,7 +3,6 @@
 function openMobileNav() {
 
   //Selects mobile-nav div, which defaults to display:none; | toggling it between display: flex and none
-
   var nav = document.getElementById("mobile-nav");
   if (nav.style.display === "flex") {
     nav.style.display = "none";
@@ -38,7 +37,7 @@ $(function() {
   });
 });
 
-// JQuery Function -- Dark Mode --
+// JQuery Function -- Dark Mode -- https://codepen.io/jascha/pen/mjReVZ
 
 //set starting point for dark mode, store that value in sessionStorage, use if statement to toggle correctly;
 
