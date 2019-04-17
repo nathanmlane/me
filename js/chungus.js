@@ -37,29 +37,6 @@ $(function() {
   });
 });
 
-// JQuery Function -- Dark Mode -- Insprired and Adjusted From -- https://codepen.io/jascha/pen/mjReVZ
-
-//set starting point for dark mode, working on storing that value in sessionStorage so save state of the button through reload
-
-let toggleDarkMode = function() {
-  $("body").toggleClass('night day');
-  $("p").toggleClass('dark light');
-  $("h1").toggleClass('dark light');
-  $("h2").toggleClass('dark light');
-  $("h3").toggleClass('dark light');
-  $("h4").toggleClass('dark light');
-  $("h5").toggleClass('dark light');
-  $("h6").toggleClass('dark light');
-  $("li").toggleClass('dark light');
-  $("a").toggleClass('dark light');
-  $("button").toggleClass('dark light');
-  $(".nav").toggleClass('dark light');
-  $("nav-title").toggleClass('dark light');
-  $(".mockup-img").toggleClass('dark light');
-}
-
-$("#sun-moon").click(toggleDarkMode);
-
 //Skill Bar Progression -- https://codepen.io/Tushkiz/pen/lntvd
 
 $(function() {

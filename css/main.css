@@ -9,23 +9,23 @@ body {
 }
 
 p {
-  color: #fff;
+  color: #000;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: none;
-  color: #fff;
+  color: #000;
 }
 
 a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
 li {
   list-style: none;
   list-style-position: inside;
-  color: #fff;
+  color: #000;
 }
 
 hr {
@@ -139,7 +139,7 @@ body {
   transition: background-color .5s ease;
 }
 
-body.night {
+/* body.night {
   background-color: #23232A;
 }
 
@@ -264,7 +264,7 @@ body.night #sun-moon:after {
   color: #fff;
   box-shadow: 0 0 0 0 #23232A, 0 0 0 0 #23232A, 0 0 0 3px #a5abb0, 0 0 0 30px #23232A;
   border-color: #23232A;
-}
+} */
 
 .nav {
   height: 70px;
@@ -278,7 +278,7 @@ body.night #sun-moon:after {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
   position: fixed;
   display: flex;
-  background-color: #1D1D23;
+  background-color: #fff;
   justify-content: space-between;
   align-items: center;
 }
@@ -287,9 +287,9 @@ body.night #sun-moon:after {
   transition: background-color .5s ease;
 }
 
-.nav.dark {
-  background-color: #fff;
-}
+/*.nav.dark {
+  background-color: #000;
+}*/
 
 .logo-img {
   display: flex;
@@ -333,7 +333,7 @@ body.night #sun-moon:after {
 .mobile-nav-trigger {
   font-family: 'Overpass', sans-serif;
   font-size: 1rem;
-  color: #fff;
+  color: #000;
   background-color: transparent;
   border-radius: 2px;
   border-color: transparent;
@@ -359,7 +359,7 @@ body.night #sun-moon:after {
 button {
   font-family: 'Overpass Mono', sans-serif;
   font-size: 1.2rem;
-  color: white;
+  color: #000;
   background: none;
   border: 0;
   box-sizing: border-box;
@@ -505,17 +505,17 @@ button:focus {
 }
 
 .black:hover {
-  color: #fff;
+  color: #000;
 }
 
 .black:hover::before {
-  border-top-color: #fff;
-  border-right-color: #fff;
+  border-top-color: #000;
+  border-right-color: #000;
 }
 
 .black:hover::after {
-  border-bottom-color: #fff;
-  border-left-color: #fff;
+  border-bottom-color: #000;
+  border-left-color: #000;
 }
 
 /* =================================
@@ -572,7 +572,7 @@ progress::-moz-progress-bar {
 .mockup-img {
   max-width: 250px;
   margin: 1.75rem 2rem 0 -.5rem;
-  border: 2px solid #fff;
+  box-shadow: 2px 2px 4px rgba(0,0,0,.25);
   border-radius: 2px;
 }
 
@@ -684,7 +684,7 @@ progress::-moz-progress-bar {
 
   .main {
     background-color: transparent;
-    color: #444;
+    color: #000;
     padding-top: 0px;
     margin-left: 22vw;
     max-width: 74vw;
