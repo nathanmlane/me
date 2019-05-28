@@ -40,6 +40,9 @@ hr {
   visibility: visible;
 }
 
+.flex {
+  display: flex;
+}
 /* =================================
   Colors
 ==================================== */
@@ -618,17 +621,25 @@ progress::-moz-progress-bar {
 .button-container {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
   margin-top: 3rem;
-  margin-right: 2rem;
-  flex-basis: 500px;
-  margin-bottom: 8rem;
+  margin-right: auto;
+  margin-left: auto;
+  flex: 1;
+  margin-bottom: 3rem;
+}
+
+.width-fix {
+  width: 95%;
 }
 
 .next {
+  display: flex;
   align-self: flex-end;
 }
 
 .previous {
+  display: flex;
   align-self: flex-start;
 }
 
@@ -706,6 +717,7 @@ progress::-moz-progress-bar {
   }
 
   .button-container {
+    flex-direction: row;
     margin-bottom: 8rem;
   }
 
@@ -754,7 +766,7 @@ progress::-moz-progress-bar {
   }
 
   .width-fix {
-    width: 50vw;
+    width: 80%;
   }
 
   .contact-container {
